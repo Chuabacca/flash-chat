@@ -20,13 +20,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="e8P-2y-UOi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="e8P-2y-UOi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="e8P-2y-UOi" secondAttribute="bottom" id="9LD-TR-xd6"/>
+                            <constraint firstAttribute="bottom" secondItem="e8P-2y-UOi" secondAttribute="bottom" id="9LD-TR-xd6"/>
                             <constraint firstAttribute="trailing" secondItem="e8P-2y-UOi" secondAttribute="trailing" id="QlK-Wi-vgP"/>
                             <constraint firstItem="e8P-2y-UOi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="XCV-2t-8hq"/>
                             <constraint firstItem="e8P-2y-UOi" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="btT-P1-AD1"/>
@@ -39,7 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="596" height="842"/>
-        <image name="LABLOGONewRound2" width="250" height="250"/>
+        <image name="background" width="1280" height="949"/>
     </resources>
 </document>
