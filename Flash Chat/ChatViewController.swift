@@ -119,8 +119,22 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         //TODO: Send the message to Firebase and save it in our database
-        
-        
+        messageTextfield.isEnabled = false
+        sendButton.isEnabled = false
+
+        let messagesDB = FIRDatabase.database().reference().child("Messages")
+
+        let messageDictionary = ["Sender": FIRAuth.auth()?.currentUser?.email, "MessageBody": messageTextfield.text!]
+
+        messagesDB.childByAutoId().setValue(messageDictionary) { (error, ref) in
+            guard error == nil else {
+                print(error!)
+            }
+            print("Message saved successfully")
+            self.messageTextfield.isEnabled = true
+            self.sendButton.isEnabled = true
+            self.messageTextfield.text = ""
+        }
     }
     
     //TODO: Create the retrieveMessages method here:
