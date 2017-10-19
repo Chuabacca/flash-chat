@@ -131,6 +131,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         messagesDB.childByAutoId().setValue(messageDictionary) { (error, ref) in
             guard error == nil else {
                 print(error!)
+                return
             }
             print("Message saved successfully")
             self.messageTextfield.isEnabled = true
